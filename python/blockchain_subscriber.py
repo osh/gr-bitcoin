@@ -14,19 +14,21 @@ class blockchain_subscriber(Thread):
         self.finished = False;
         self.start();    
 
+    def stop(self):
+        self.finished = True;
+
     def run(self):
         while not self.finished:
             result = self.ws.recv();
             r = json.loads(result);
-
-            self.utx_cb(r);
-            pprint.pprint(r);
+            if(r["op"]=="utx" and self.utx_cb):
+                self.utx_cb(r);
+            elif(self.block_cb):
+                self.block_cb(r);
  
 if __name__ == "__main__":
     def printer(a):
         pprint.pprint(a);
-    bs = blockchain_subscriber(printer);
+    bs = blockchain_subscriber(printer,printer);
     bs.join();
-
-
 

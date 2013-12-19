@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<block>
+  <name>Bitcoin Blockchain Message Source</name>
+  <key>bitcoin_blockchain_source</key>
+  <category>bitcoin</category>
+  <import>import bitcoin</import>
+  <make>bitcoin.blockchain_source()</make>
+
+  <source>
+    <name>utx</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+
+  <source>
+    <name>block</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+
+</block>

@@ -42,8 +42,10 @@ if _RTLD_GLOBAL != 0:
 
 
 # import swig generated symbols into the bitcoin namespace
-from bitcoin_swig import *
+#from bitcoin_swig import *
 from blockchain_subscriber import *
+from blockchain_source import *
+from bitcoin_framer import *
 
 # import any pure python here
 #

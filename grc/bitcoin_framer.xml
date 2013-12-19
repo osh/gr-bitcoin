@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<block>
+  <name>Bitcoin Framer</name>
+  <key>bitcoin_framer</key>
+  <category>bitcoin</category>
+  <import>import bitcoin</import>
+  <make>bitcoin.framer()</make>
+
+  <sink>
+    <name>msg_string</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+
+  <source>
+    <name>pdu</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+</block>

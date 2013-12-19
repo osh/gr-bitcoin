@@ -18,5 +18,7 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
+    bitcoin_blockchain_source.xml
+    bitcoin_framer.xml
     DESTINATION share/gnuradio/grc/blocks
 )
