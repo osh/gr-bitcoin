@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<block>
+  <name>Slotted No-Overlap Burst Scheduler</name>
+  <key>btc_burst_scheduler</key>
+  <category>bircoin</category>
+  <import>import bitcoin</import>
+  <make>bitcoin.burst_scheduler($fb, $sl, $mg)</make>
+
+  <param>
+    <name>Feedback Delay</name>
+    <key>fb</key>
+    <value>2048</value>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Slot Length</name>
+    <key>sl</key>
+    <value>1000</value>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Min Gap</name>
+    <key>mg</key>
+    <value>100</value>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>schedule_pdu</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+
+  <sink>
+    <name>nproduced</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+
+  <source>
+    <name>scheduled_pdu</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+
+</block>

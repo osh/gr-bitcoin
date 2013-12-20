@@ -34,6 +34,7 @@ GR_PYTHON_INSTALL(
     blockchain_subscriber.py
     blockchain_source.py
     bitcoin_framer.py
+    burst_scheduler.py
     DESTINATION ${GR_PYTHON_DIR}/bitcoin
 )
 

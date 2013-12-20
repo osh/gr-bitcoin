@@ -20,5 +20,6 @@
 install(FILES
     bitcoin_blockchain_source.xml
     bitcoin_framer.xml
+    burst_scheduler.xml
     DESTINATION share/gnuradio/grc/blocks
 )

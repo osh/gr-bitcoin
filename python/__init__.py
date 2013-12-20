@@ -46,6 +46,7 @@ if _RTLD_GLOBAL != 0:
 from blockchain_subscriber import *
 from blockchain_source import *
 from bitcoin_framer import *
+from burst_scheduler import *
 
 # import any pure python here
 #
